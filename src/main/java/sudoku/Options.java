@@ -40,12 +40,12 @@ public final class Options {
     private static final ProgressComparator progressComparator = new ProgressComparator();
     // Schwierigkeitsstufen
     public static final DifficultyLevel[] DEFAULT_DIFFICULTY_LEVELS = {
-        new DifficultyLevel(DifficultyType.INCOMPLETE, 0, ResourceBundle.getBundle("main/resources/intl/MainFrame").getString("MainFrame.incomplete"), Color.BLACK, Color.WHITE),
-        new DifficultyLevel(DifficultyType.EASY, 800, ResourceBundle.getBundle("main/resources/intl/MainFrame").getString("MainFrame.easy"), Color.WHITE, Color.BLACK),
-        new DifficultyLevel(DifficultyType.MEDIUM, 1000, ResourceBundle.getBundle("main/resources/intl/MainFrame").getString("MainFrame.medium"), new Color(100, 255, 100), Color.BLACK),
-        new DifficultyLevel(DifficultyType.HARD, 1600, ResourceBundle.getBundle("main/resources/intl/MainFrame").getString("MainFrame.hard"), new Color(255, 255, 100), Color.BLACK),
-        new DifficultyLevel(DifficultyType.UNFAIR, 1800, ResourceBundle.getBundle("main/resources/intl/MainFrame").getString("MainFrame.unfair"), new Color(255, 150, 80), Color.BLACK),
-        new DifficultyLevel(DifficultyType.EXTREME, Integer.MAX_VALUE, ResourceBundle.getBundle("main/resources/intl/MainFrame").getString("MainFrame.extreme"), new Color(255, 100, 100), Color.BLACK)
+        new DifficultyLevel(DifficultyType.INCOMPLETE, 0, ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.incomplete"), Color.BLACK, Color.WHITE),
+        new DifficultyLevel(DifficultyType.EASY, 800, ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.easy"), Color.WHITE, Color.BLACK),
+        new DifficultyLevel(DifficultyType.MEDIUM, 1000, ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.medium"), new Color(100, 255, 100), Color.BLACK),
+        new DifficultyLevel(DifficultyType.HARD, 1600, ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.hard"), new Color(255, 255, 100), Color.BLACK),
+        new DifficultyLevel(DifficultyType.UNFAIR, 1800, ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.unfair"), new Color(255, 150, 80), Color.BLACK),
+        new DifficultyLevel(DifficultyType.EXTREME, Integer.MAX_VALUE, ResourceBundle.getBundle("intl/MainFrame").getString("MainFrame.extreme"), new Color(255, 100, 100), Color.BLACK)
     };
 
     private DifficultyLevel[] difficultyLevels = null;

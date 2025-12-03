@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 public class Sudoku2 {
 
     // Test 1: setSudoku loads a valid puzzle
@@ -46,5 +48,85 @@ public class Sudoku2 {
         assertEquals(testSudoku2.getValue(1, 3), 1);
         assertEquals(testSudoku2.getValue(8, 7), 7);
         assertEquals(testSudoku2.getValue(8, 8), 9);
+    }
+
+    // Test 2: getValue returns 0 for an empty cell
+    //
+    @Test
+    void EmptyCellValidPuzzle() {
+
+        // Arrange
+
+        // Need to make an instance of Sudoku2?
+        sudoku.Sudoku2 testSudoku2 = new sudoku.Sudoku2();
+
+
+        // This is an example
+        String init =
+                """
+                +-------+-------+-------+
+                | 5 . 0 | . 7 . | . . . |
+                | 6 . . | 1 . . | . . . |
+                | . . . | . . . | . . . |
+                +-------+-------+-------+
+                | . . . | . . . | . . . |
+                | . . . | . . . | . . . |
+                | . . . | . . . | . . . |
+                +-------+-------+-------+
+                | . . . | . . . | . . . |
+                | . . . | . . . | . . . |
+                | . . . | . . . | . 7 9 |
+                +-------+-------+-------+
+                """;
+
+        // Act
+
+        testSudoku2.setSudoku(init, true);
+
+        // Assert
+
+        int result = testSudoku2.getValue(0, 2);
+
+        assertEquals(result, 0);
+    }
+
+    // Test 3: isCandidate is false on a fixed (given) cell
+    //
+    @Test
+    void IsCandidateFalseValidPuzzle() {
+
+        // Arrange
+
+        // Need to make an instance of Sudoku2?
+        sudoku.Sudoku2 testSudoku2 = new sudoku.Sudoku2();
+
+
+        // This is an example
+        String init =
+                """
+                +-------+-------+-------+
+                | 5 . 0 | . 7 . | . . . |
+                | 6 . . | 1 . . | . . . |
+                | . . . | . . . | . . . |
+                +-------+-------+-------+
+                | . . . | . . . | . . . |
+                | . . . | . . . | . . . |
+                | . . . | . . . | . . . |
+                +-------+-------+-------+
+                | . . . | . . . | . . . |
+                | . . . | . . . | . . . |
+                | . . . | . . . | . 7 9 |
+                +-------+-------+-------+
+                """;
+
+        // Act
+
+        testSudoku2.setSudoku(init, true);
+
+        // Assert
+
+        boolean result = testSudoku2.isCandidate(0, 1);
+
+        assertFalse(result);
     }
 }
